@@ -10,10 +10,10 @@ app.secret_key = "your_secret_key"
 def get_db_connection():
     # Pastikan kode di dalam fungsi ini diindentasikan dengan benar
     conn = mariadb.connect(
-        user="root",
-        password="fufufafa",    # Ganti dengan password yang sesuai
-        host="localhost",       # Ganti dengan host jika berbeda
-        database="cekkejiwaan"  # Ganti dengan nama database yang sesuai
+        user="cekkejiwaan_functiongo",
+        password="1cf1c0d99219c097b5e58c142e75bbe1a61a9f71",    # Ganti dengan password yang sesuai
+        host="vwisn.h.filess.io",       # Ganti dengan host jika berbeda
+        database="cekkejiwaan_functiongo"  # Ganti dengan nama database yang sesuai
     )
     return conn
 
