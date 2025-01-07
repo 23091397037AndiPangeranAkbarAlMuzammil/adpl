@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+<div class="max-w-md mx-auto bg-white p-8 rounded-lg shadow">
+    <h2 class="text-xl font-bold mb-4">Login</h2>
+    <form action="/" method="POST" autocomplete="off" class="space-y-4">
+        <div>
+            <label for="username" class="block text-sm font-medium">Username</label>
+            <input type="text" id="username" name="username" required class="input input-bordered w-full">
+        </div>
+        <div>
+            <label for="age" class="block text-sm font-medium">Umur</label>
+            <input type="number" id="age" name="age" required class="input input-bordered w-full">
+        </div>
+        <div>
+            <label for="gender" class="block text-sm font-medium">Jenis Kelamin</label>
+            <select id="gender" name="gender" required class="select select-bordered w-full">
+                <option value="Laki-laki">Laki-laki</option>
+                <option value="Perempuan">Perempuan</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary w-full">Masuk</button>
+    </form>
+</div>
+{% endblock %}

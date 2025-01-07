@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %}Diagnosa{% endblock %}
+
+{% block content %}
+<div class="max-w-3xl mx-auto bg-white p-8 rounded-lg shadow">
+    <h2 class="text-xl font-bold mb-4">Diagnosa</h2>
+    <form action="/diagnosa" method="POST" class="space-y-4">
+        {% for kode, deskripsi in gejala.items() %}
+        <div>
+            <label for="{{ kode }}" class="block text-sm font-medium">{{ deskripsi }}</label>
+            <!-- Dropdown untuk memilih CF -->
+            <select id="{{ kode }}" name="{{ kode }}" required class="input input-bordered w-full">
+                <option value="" selected>-- Pilih Tingkat Kepastian --</option>
+                <option value="0.0">Tidak Pasti</option>
+                <option value="0.2">Hampir Tidak Pasti</option>
+                <option value="0.3">Kemungkinan Besar Tidak</option>
+                <option value="0.4">Mungkin Tidak</option>
+                <option value="0.5">Kemungkinan Kecil</option>
+                <option value="0.6">Mungkin</option>
+                <option value="0.7">Kemungkinan Besar</option>
+                <option value="0.8">Hampir Pasti</option>
+                <option value="1.0">Pasti</option>
+            </select>
+        </div>
+        {% endfor %}
+        <button type="submit" class="btn btn-primary w-full">Submit</button>
+    </form>
+</div>
+{% endblock %}
